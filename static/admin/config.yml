@@ -1,0 +1,572 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'blog-post',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+  - name: 'root'
+    label: 'Main'
+    files:
+      - file: 'src/pages/root/index.md'
+        label: 'Main Page'
+        name: 'root'
+        fields:
+        - {
+            label: 'Template Key',
+            name: 'templateKey',
+            widget: 'hidden',
+            default: 'root-page',
+          }
+        - {
+            label: 'blog',
+            name: 'blog',
+            widget: 'hidden',
+          }
+        - {
+            label: 'supports',
+            name: 'supports',
+            widget: 'hidden',
+          }
+        - {
+          label: firstscreen,
+          name: firstscreen,
+          widget: object,
+          fields: 
+            [
+              { label: Header, name: header, widget: string },
+              { label: Subheader, name: subheader, widget: string },
+              { label: Text, name: text, widget: text },
+              { label: Hiddentext, name: hiddentext, widget: string },
+            ]
+        }
+        - {
+          label: secondscreen,
+          name: secondscreen,
+          widget: object,
+          fields:
+            [
+              { label: Header, name: header, widget: string },
+              { label: Subheader, name: subheader, widget: string },
+              { 
+                label: Cards,
+                name: cards,
+                widget: object,
+                fields: [
+                  {
+                    label: First Left Card, name: firstleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Second Left Card, name: secondleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Third Left Card, name: thirdleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: First Right Card, name: firstrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Second Right Card, name: secondrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Third Right Card, name: thirdrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  }
+                ]
+              }
+            ]
+        }
+        - {
+          label: thirdscreen,
+          name: thirdscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { 
+              label: Accordion, 
+              name: accordion, 
+              widget: list,
+              fields: [
+                { label: Title, name: title, widget: string },
+                { label: Text, name: text, widget: text }
+              ]
+             }
+          ]
+        }
+        - {
+          label: fourthscreen,
+          name: fourthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+            { label: Text, name: text, widget: text },
+            { 
+              label: List, name: list, widget: list, 
+              fields: [
+                { label: List Item, name: listitem, widget: string }
+              ]
+            },
+          ]
+        }
+        - { 
+          label: fifthscreen,
+          name: fifthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+          ]
+        }
+        - { 
+          label: sixthscreen,
+          name: sixthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+          ]
+        }
+        - { 
+          label: seventhscreen,
+          name: seventhscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+            { label: Text, name: text, widget: string },
+          ]
+        }
+        - {
+          label: seo,
+          name: seo,
+          widget: object,
+          fields: [
+            { label: Title, name: title, widget: string },
+            { label: Description, name: description, widget: string }
+          ]
+        }
+  - name: 'ru'
+    label: 'RU'
+    files:
+      - file: 'src/pages/ru/index.md'
+        label: 'Main Page Russian'
+        name: 'ru'
+        fields:
+        - {
+            label: 'Template Key',
+            name: 'templateKey',
+            widget: 'hidden',
+            default: 'main-page',
+          }
+        - {
+            label: 'blog',
+            name: 'blog',
+            widget: 'hidden',
+          }
+        - {
+            label: 'supports',
+            name: 'supports',
+            widget: 'hidden',
+          }
+        - {
+          label: firstscreen,
+          name: firstscreen,
+          widget: object,
+          fields: 
+            [
+              { label: Header, name: header, widget: string },
+              { label: Subheader, name: subheader, widget: string },
+              { label: Text, name: text, widget: text },
+              { label: Hiddentext, name: hiddentext, widget: string },
+            ]
+        }
+        - {
+          label: secondscreen,
+          name: secondscreen,
+          widget: object,
+          fields:
+            [
+              { label: Header, name: header, widget: string },
+              { label: Subheader, name: subheader, widget: string },
+              { 
+                label: Cards,
+                name: cards,
+                widget: object,
+                fields: [
+                  {
+                    label: First Left Card, name: firstleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Second Left Card, name: secondleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Third Left Card, name: thirdleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: First Right Card, name: firstrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Second Right Card, name: secondrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Third Right Card, name: thirdrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  }
+                ]
+              }
+            ]
+        }
+        - {
+          label: thirdscreen,
+          name: thirdscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { 
+              label: Accordion, 
+              name: accordion, 
+              widget: list,
+              fields: [
+                { label: Title, name: title, widget: string },
+                { label: Text, name: text, widget: text }
+              ]
+             }
+          ]
+        }
+        - {
+          label: fourthscreen,
+          name: fourthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+            { label: Text, name: text, widget: text },
+            { 
+              label: List, name: list, widget: list, 
+              fields: [
+                { label: List Item, name: listitem, widget: string }
+              ]
+            },
+          ]
+        }
+        - { 
+          label: fifthscreen,
+          name: fifthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+          ]
+        }
+        - { 
+          label: sixthscreen,
+          name: sixthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+          ]
+        }
+        - { 
+          label: seventhscreen,
+          name: seventhscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+            { label: Text, name: text, widget: string },
+          ]
+        }
+        - {
+          label: seo,
+          name: seo,
+          widget: object,
+          fields: [
+            { label: Title, name: title, widget: string },
+            { label: Description, name: description, widget: string }
+          ]
+        }
+  
+  - name: 'cofiguration'
+    label: 'Configuration'
+    files:
+      - file: 'src/pages/configuration/config.md'
+        label: 'Links'
+        name: 'links'
+        fields:
+          - {
+            label: 'Template Key',
+            name: 'templateKey',
+            widget: 'hidden',
+            default: 'config-page',
+          }
+          - {
+            label: social links,
+            name: sociallinks,
+            widget: object,
+            fields: [
+              { label: Facebook, name: facebook, widget: string },
+              { label: Instagram, name: instagram, widget: string },
+              { label: YouTube, name: youtube, widget: string },
+              { label: Twitter, name: twitter, widget: string }
+            ]
+          }
+          - {
+            label: download links,
+            name: downloadlinks,
+            widget: object,
+            fields: [
+              { label: Google Play Market, name: playmarker, widget: string },
+              { label: Apple AppStore, name: appstore, widget: string },
+              { label: YouTube Video, name: youtubevideo, widget: string }
+            ]
+          }
+          - {
+            label: support links,
+            name: supportlinks,
+            widget: object,
+            fields: [
+              { label: Viber, name: viber, widget: string },
+              { label: Facebook messenger, name: facebookmessenger, widget: string },
+              { label: Telegram, name: telegram, widget: string }
+            ]
+          }
+          - {
+            label: phones,
+            name: phones,
+            widget: object,
+            fields: [
+              { label: kyivstar, name: kyivstar, widget: string },
+              { label: vodafone, name: vodafone, widget: string },
+              { label: lifecell, name: lifecell, widget: string }
+            ]
+          }
+  
+  - name: 'en'
+    label: 'EN'
+    files:
+      - file: 'src/pages/en/index.md'
+        label: 'Main Page EN'
+        name: 'EN'
+        fields:
+        - {
+            label: 'Template Key',
+            name: 'templateKey',
+            widget: 'hidden',
+            default: 'main-page',
+          }
+        - {
+            label: 'blog',
+            name: 'blog',
+            widget: 'hidden',
+          }
+        - {
+            label: 'supports',
+            name: 'supports',
+            widget: 'hidden',
+          }
+        - {
+          label: firstscreen,
+          name: firstscreen,
+          widget: object,
+          fields: 
+            [
+              { label: Header, name: header, widget: string },
+              { label: Subheader, name: subheader, widget: string },
+              { label: Text, name: text, widget: text },
+              { label: Hiddentext, name: hiddentext, widget: string },
+            ]
+        }
+        - {
+          label: secondscreen,
+          name: secondscreen,
+          widget: object,
+          fields:
+            [
+              { label: Header, name: header, widget: string },
+              { label: Subheader, name: subheader, widget: string },
+              { 
+                label: Cards,
+                name: cards,
+                widget: object,
+                fields: [
+                  {
+                    label: First Left Card, name: firstleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Second Left Card, name: secondleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Third Left Card, name: thirdleftcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: First Right Card, name: firstrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Second Right Card, name: secondrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  },
+                  {
+                    label: Third Right Card, name: thirdrightcard, widget: object,
+                    fields: [
+                      { label: Card Title, name: cardtitle, widget: string },
+                      { label: Card Text, name: cardtext, widget: text },
+                    ]
+                  }
+                ]
+              }
+            ]
+        }
+        - {
+          label: thirdscreen,
+          name: thirdscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { 
+              label: Accordion, 
+              name: accordion, 
+              widget: list,
+              fields: [
+                { label: Title, name: title, widget: string },
+                { label: Text, name: text, widget: text }
+              ]
+             }
+          ]
+        }
+        - {
+          label: fourthscreen,
+          name: fourthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+            { label: Text, name: text, widget: text },
+            { 
+              label: List, name: list, widget: list, 
+              fields: [
+                { label: List Item, name: listitem, widget: string }
+              ]
+            },
+          ]
+        }
+        - { 
+          label: fifthscreen,
+          name: fifthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+          ]
+        }
+        - { 
+          label: sixthscreen,
+          name: sixthscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+          ]
+        }
+        - { 
+          label: seventhscreen,
+          name: seventhscreen,
+          widget: object,
+          fields: [
+            { label: Header, name: header, widget: string },
+            { label: Subheader, name: subheader, widget: string },
+            { label: Text, name: text, widget: string },
+          ]
+        }
+        - {
+          label: seo,
+          name: seo,
+          widget: object,
+          fields: [
+            { label: Title, name: title, widget: string },
+            { label: Description, name: description, widget: string }
+          ]
+        }
+        
+      
