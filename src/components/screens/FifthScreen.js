@@ -183,7 +183,7 @@ const FifthScreenTemplate = ({ header }) => (
                   <img
                     srcSet="/images/5/zakazy.jpg"
                     alt="Gallery"
-                    src=""
+                    src="data:,"
                   />
                 </picture>
               </a>

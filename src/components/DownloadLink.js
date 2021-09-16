@@ -26,7 +26,7 @@ const DownloadLink = ({ className }) => (
                 {
                   srcSet: '/images/icons/icon_googleplay_footer.webp',
                   type: 'image/webp',
-                  src: 'data:,'
+                  src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII='
                 },
                 {
                   src: '/images/icons/icon_googleplay_footer.png',
@@ -44,7 +44,7 @@ const DownloadLink = ({ className }) => (
                 {
                   srcSet: '/images/icons/icon_appstore_footer.webp',
                   type: 'image/webp',
-                  src: 'data:,'
+                  src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII='
                 },
                 {
                   src: '/images/icons/icon_appstore_footer.png',
