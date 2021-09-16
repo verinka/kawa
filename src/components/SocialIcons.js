@@ -29,7 +29,7 @@ const SocialIcons = ({ slideText }) => (
             )}
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href={data.markdownRemark.frontmatter.sociallinks.twitter}>
             <i className="icon2-tw" />
             {slideText ? (
@@ -38,7 +38,7 @@ const SocialIcons = ({ slideText }) => (
               ''
             )}
           </a>
-        </li>
+        </li> */}
         <li>
           <a href={data.markdownRemark.frontmatter.sociallinks.youtube}>
             <i className="icon2-yt" />

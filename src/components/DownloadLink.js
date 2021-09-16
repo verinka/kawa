@@ -53,7 +53,7 @@ const DownloadLink = ({ className }) => (
             />
           </a>
         </li>
-        <li className="mr-3">
+        {/* <li className="mr-3">
           <a href={data.markdownRemark.frontmatter.downloadlinks.youtubevideo}>
             <Picture
               sources={[
@@ -69,7 +69,7 @@ const DownloadLink = ({ className }) => (
               ]}
             />
           </a>
-        </li>
+        </li> */}
       </ul>
     )}
   />

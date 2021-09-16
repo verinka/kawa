@@ -26,6 +26,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/cart.png"
                 alt="kawa cart"
                 className="img-fluid"
+                src=""
               />
             </div>
 
@@ -44,6 +45,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/barcode.png"
                 alt="kawa barcode scanner"
                 className="img-fluid"
+                src=""
               />
             </div>
             <div className="features-content">
@@ -61,6 +63,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/coffee-beans.png"
                 alt="kawa coffee card"
                 className="img-fluid"
+                src=""
               />
             </div>
             <div className="features-content">
@@ -80,20 +83,22 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
               srcSet="/images/2/catalog.png"
               alt="kawa catalog"
               id="featureImage"
+              src=""
             />
           </picture>
         </div>
         <div className="col-lg-4 col-md-12">
           <div
             className="features-service text-left"
-            data-img="/images/2/recipes_catalog.png"
-            data-img-webp="/images/2/recipes_catalog.webp"
+            data-img="/images/2/2-svejak.png"
+            data-img-webp="/images/2/2-svejak.webp"
           >
             <div className="features-icon">
               <img
                 srcSet="/images/icons/menu.png"
                 alt="kawa menu"
                 className="img-fluid"
+                src=""
               />
             </div>
             <div className="features-content">
@@ -103,14 +108,15 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
           </div>
           <div
             className="features-service text-left"
-            data-img="/images/2/recipes_search_milk-1.png"
-            data-img-webp="/images/2/recipes_search_milk-1.webp"
+            data-img="/images/2/2-suputni-tovary.png"
+            data-img-webp="/images/2/2-suputni-tovary.webp"
           >
             <div className="features-icon">
               <img
                 srcSet="/images/icons/search.png"
                 alt="kawa search"
                 className="img-fluid"
+                src=""
               />
             </div>
             <div className="features-content">
@@ -128,6 +134,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/cup.png"
                 alt="kawa divination"
                 className="img-fluid"
+                src=""
               />
             </div>
             <div className="features-content">

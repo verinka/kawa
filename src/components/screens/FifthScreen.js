@@ -36,147 +36,154 @@ const FifthScreenTemplate = ({ header }) => (
             data-md-device-dots="false"
           >
             <div className="single-gallery">
-              <a href="/images/5/dostavka-u-oplata.png" className="popup-quote">
+              <a href="/images/5/dostavka.jpg" className="popup-quote">
                 <picture>
                   <source
-                    srcSet="/images/5/dostavka-u-oplata.webp"
+                    srcSet="/images/5/dostavka.webp"
                     type="image/webp"
                   />
-                  <img srcSet="/images/5/dostavka-u-oplata.png" alt="Gallery" />
+                  <img srcSet="/images/5/dostavka.jpg" alt="Gallery" src="" />
                 </picture>
               </a>
             </div>
             <div className="single-gallery">
               <a
-                href="images/5/drugie-tovari-(karta-tovara).png"
+                href="images/5/about.jpg"
                 className="popup-quote"
               >
                 <picture>
                   <source
-                    srcSet="/images/5/drugie-tovari-(karta-tovara).webp"
+                    srcSet="/images/5/about.webp"
                     type="image/webp"
                   />
                   <img
-                    srcSet="/images/5/drugie-tovari-(karta-tovara).png"
+                    srcSet="/images/5/about.jpg"
                     alt="Gallery"
-                  />
-                </picture>
-              </a>
-            </div>
-            <div className="single-gallery">
-              <a
-                href="images/5/drugie-tovari-(karta-tovara-pop-up).png"
-                className="popup-quote"
-              >
-                <picture>
-                  <source
-                    srcSet="/images/5/drugie-tovari-(karta-tovara-pop-up).webp"
-                    type="image/webp"
-                  />
-                  <img
-                    srcSet="/images/5/drugie-tovari-(karta-tovara-pop-up).png"
-                    alt="Gallery"
+                    src=""
                   />
                 </picture>
               </a>
             </div>
             <div className="single-gallery">
               <a
-                href="images/5/gotovim-po-recepty(spravka).png"
+                href="images/5/Support.jpg"
                 className="popup-quote"
               >
                 <picture>
                   <source
-                    srcSet="/images/5/gotovim-po-recepty(spravka).webp"
+                    srcSet="/images/5/Support.webp"
                     type="image/webp"
                   />
                   <img
-                    srcSet="/images/5/gotovim-po-recepty(spravka).png"
+                    srcSet="/images/5/Support.jpg"
                     alt="Gallery"
+                    src=""
                   />
                 </picture>
               </a>
             </div>
             <div className="single-gallery">
               <a
-                href="images/5/karta-tovara-(s-otzivom).png"
+                href="images/5/Main.jpg"
                 className="popup-quote"
               >
                 <picture>
                   <source
-                    srcSet="/images/5/karta-tovara-(s-otzivom).webp"
+                    srcSet="/images/5/Main.webp"
                     type="image/webp"
                   />
                   <img
-                    srcSet="/images/5/karta-tovara-(s-otzivom).png"
+                    srcSet="/images/5/Main.jpg"
                     alt="Gallery"
-                  />
-                </picture>
-              </a>
-            </div>
-            <div className="single-gallery">
-              <a href="images/5/korzina.png" className="popup-quote">
-                <picture>
-                  <source srcSet="/images/5/korzina.webp" type="image/webp" />
-                  <img srcSet="/images/5/korzina.png" alt="Gallery" />
-                </picture>
-              </a>
-            </div>
-            <div className="single-gallery">
-              <a
-                href="images/5/li4nue-dannue(net-dati-rogdeni9).png"
-                className="popup-quote"
-              >
-                <picture>
-                  <source
-                    srcSet="/images/5/li4nue-dannue(net-dati-rogdeni9).webp"
-                    type="image/webp"
-                  />
-                  <img
-                    srcSet="/images/5/li4nue-dannue(net-dati-rogdeni9).png"
-                    alt="Gallery"
+                    src=""
                   />
                 </picture>
               </a>
             </div>
             <div className="single-gallery">
               <a
-                href="images/5/love-recepti-(prigotovlenie).png"
+                href="images/5/menu.jpg"
                 className="popup-quote"
               >
                 <picture>
                   <source
-                    srcSet="/images/5/love-recepti-(prigotovlenie).webp"
+                    srcSet="/images/5/menu.webp"
                     type="image/webp"
                   />
                   <img
-                    srcSet="/images/5/love-recepti-(prigotovlenie).png"
+                    srcSet="/images/5/menu.jpg"
                     alt="Gallery"
+                    src=""
                   />
                 </picture>
               </a>
             </div>
             <div className="single-gallery">
-              <a href="images/5/menu.png" className="popup-quote">
+              <a href="images/5/Cart.jpg" className="popup-quote">
                 <picture>
-                  <source srcSet="/images/5/menu.webp" type="image/webp" />
-                  <img srcSet="/images/5/menu.png" alt="Gallery" />
+                  <source srcSet="/images/5/Cart.webp" type="image/webp" />
+                  <img srcSet="/images/5/Cart.jpg" alt="Gallery" src="" />
                 </picture>
               </a>
             </div>
             <div className="single-gallery">
               <a
-                href="images/5/ustori9-pokypok-catalog-2.png"
+                href="images/5/gadanie.jpg"
                 className="popup-quote"
               >
                 <picture>
                   <source
-                    srcSet="/images/5/ustori9-pokypok-catalog-2.webp"
+                    srcSet="/images/5/gadanie.webp"
                     type="image/webp"
                   />
                   <img
-                    srcSet="/images/5/ustori9-pokypok-catalog-2.png"
+                    srcSet="/images/5/gadanie.jpg"
                     alt="Gallery"
+                    src=""
+                  />
+                </picture>
+              </a>
+            </div>
+            <div className="single-gallery">
+              <a
+                href="images/5/moi-ocenki.jpg"
+                className="popup-quote"
+              >
+                <picture>
+                  <source
+                    srcSet="/images/5/moi-ocenki.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    srcSet="/images/5/moi-ocenki.jpg"
+                    alt="Gallery"
+                    src=""
+                  />
+                </picture>
+              </a>
+            </div>
+            <div className="single-gallery">
+              <a href="images/5/Rec.jpg" className="popup-quote">
+                <picture>
+                  <source srcSet="/images/5/Rec.webp" type="image/webp" />
+                  <img srcSet="/images/5/Rec.jpg" alt="Gallery" src="" />
+                </picture>
+              </a>
+            </div>
+            <div className="single-gallery">
+              <a
+                href="images/5/zakazy.jpg"
+                className="popup-quote"
+              >
+                <picture>
+                  <source
+                    srcSet="/images/5/zakazy.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    srcSet="/images/5/zakazy.jpg"
+                    alt="Gallery"
+                    src=""
                   />
                 </picture>
               </a>

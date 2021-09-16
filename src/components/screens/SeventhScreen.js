@@ -10,11 +10,11 @@ const SeventhScreenTemplate = ({ header, subheader, text }) => (
       <div className="row heading-section-center text-center">
         <div className="col-sm-12">
           <h3 className="title-heading">{header}</h3>
-          <div className="sub-title">{subheader}</div>
+          {/* <div className="sub-title">{subheader}</div> */}
         </div>
       </div>
   
-      <Messages />
+      {/* <Messages /> */}
 
       <div className="row">
         <div className="col-sm-12 text-center contact-text">

@@ -4,9 +4,9 @@ import { Link } from 'gatsby'
 const Navbar = ({ linksTitle }) => (
   <nav className="navbar">
     <ul className="main-menu">
-      <li>
+      {/* <li>
         <Link to="/blog">{linksTitle.blog}</Link>
-      </li>
+      </li> */}
       <li>
         {/* <Link to="#contact-section2" partiallyActive={true}>{linksTitle.supports}</Link> */}
         <a href="#contact-section2">{linksTitle.supports}</a> 
