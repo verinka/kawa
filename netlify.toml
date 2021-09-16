@@ -9,4 +9,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Date = "Wed, 15 Sep 2021 12:00:00 GMT"
+    Last-Modified = "Wed, 15 Sep 2021 12:00:00 GMT"
