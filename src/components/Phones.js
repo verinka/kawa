@@ -25,6 +25,7 @@ const Phones = () => (
                 srcSet="/images/icons/vodafone.png"
                 className="img-fluid"
                 alt="vodafone"
+                src="data:,"
               />
               {data.markdownRemark.frontmatter.phones.vodafone}
             </li>
@@ -33,6 +34,7 @@ const Phones = () => (
                 srcSet="/images/icons/kyivstar.png"
                 className="img-fluid"
                 alt="kyivstar"
+                src="data:,"
               />
               {data.markdownRemark.frontmatter.phones.kyivstar}
             </li>
@@ -41,6 +43,7 @@ const Phones = () => (
                 srcSet="/images/icons/lifecell.png"
                 className="img-fluid"
                 alt="lifecell"
+                src="data:,"
               />
               {data.markdownRemark.frontmatter.phones.lifecell}
             </li>

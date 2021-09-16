@@ -8,6 +8,7 @@ const Sidebar = ({ linksTitle }) => (
         srcSet="/images/logo_menu.png"
         alt="kawa menu logo"
         className="img-fluid"
+        src="data:,"
       />
     </div>
     <ul className="sidebar__list">

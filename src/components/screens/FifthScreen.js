@@ -42,7 +42,7 @@ const FifthScreenTemplate = ({ header }) => (
                     srcSet="/images/5/dostavka.webp"
                     type="image/webp"
                   />
-                  <img srcSet="/images/5/dostavka.jpg" alt="Gallery" src="" />
+                  <img srcSet="/images/5/dostavka.jpg" alt="Gallery" src="data:," />
                 </picture>
               </a>
             </div>
@@ -59,7 +59,7 @@ const FifthScreenTemplate = ({ header }) => (
                   <img
                     srcSet="/images/5/about.jpg"
                     alt="Gallery"
-                    src=""
+                    src="data:,"
                   />
                 </picture>
               </a>
@@ -77,7 +77,7 @@ const FifthScreenTemplate = ({ header }) => (
                   <img
                     srcSet="/images/5/Support.jpg"
                     alt="Gallery"
-                    src=""
+                    src="data:,"
                   />
                 </picture>
               </a>
@@ -95,7 +95,7 @@ const FifthScreenTemplate = ({ header }) => (
                   <img
                     srcSet="/images/5/Main.jpg"
                     alt="Gallery"
-                    src=""
+                    src="data:,"
                   />
                 </picture>
               </a>
@@ -113,7 +113,7 @@ const FifthScreenTemplate = ({ header }) => (
                   <img
                     srcSet="/images/5/menu.jpg"
                     alt="Gallery"
-                    src=""
+                    src="data:,"
                   />
                 </picture>
               </a>
@@ -122,7 +122,7 @@ const FifthScreenTemplate = ({ header }) => (
               <a href="images/5/Cart.jpg" className="popup-quote">
                 <picture>
                   <source srcSet="/images/5/Cart.webp" type="image/webp" />
-                  <img srcSet="/images/5/Cart.jpg" alt="Gallery" src="" />
+                  <img srcSet="/images/5/Cart.jpg" alt="Gallery" src="data:," />
                 </picture>
               </a>
             </div>
@@ -139,7 +139,7 @@ const FifthScreenTemplate = ({ header }) => (
                   <img
                     srcSet="/images/5/gadanie.jpg"
                     alt="Gallery"
-                    src=""
+                    src="data:,"
                   />
                 </picture>
               </a>
@@ -157,7 +157,7 @@ const FifthScreenTemplate = ({ header }) => (
                   <img
                     srcSet="/images/5/moi-ocenki.jpg"
                     alt="Gallery"
-                    src=""
+                    src="data:,"
                   />
                 </picture>
               </a>
@@ -166,7 +166,7 @@ const FifthScreenTemplate = ({ header }) => (
               <a href="images/5/Rec.jpg" className="popup-quote">
                 <picture>
                   <source srcSet="/images/5/Rec.webp" type="image/webp" />
-                  <img srcSet="/images/5/Rec.jpg" alt="Gallery" src="" />
+                  <img srcSet="/images/5/Rec.jpg" alt="Gallery" src="data:," />
                 </picture>
               </a>
             </div>

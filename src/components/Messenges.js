@@ -24,6 +24,7 @@ const Messenges = () => (
             srcSet="/images/icons/viber.png"
             alt="kawa viber"
             className="contact-link__thumb img-fluid"
+            src="data:,"
           />
           <div className="contact-link__btn contact-link__btn--viber">
             VIBER
@@ -36,6 +37,7 @@ const Messenges = () => (
             srcSet="/images/icons/messenger.png"
             alt="kawa messenger"
             className="contact-link__thumb"
+            src="data:,"
           />
           <div className="contact-link__btn contact-link__btn--messenger">
             MESSENGER
@@ -48,6 +50,7 @@ const Messenges = () => (
             srcSet="/images/icons/telegram.png"
             alt="kawa telegram"
             className="contact-link__thumb"
+            src="data:,"
           />
           <div className="contact-link__btn contact-link__btn--telegram">
             TELEGRAM

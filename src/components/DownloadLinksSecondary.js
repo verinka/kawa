@@ -22,6 +22,7 @@ const DownloadLinksSecondary = () => (
             <img
               srcSet="/images/icons/icon_googleplay_footer.png"
               alt="Google store"
+              src="data:,"
             />
           </a>
         </li>
@@ -30,6 +31,7 @@ const DownloadLinksSecondary = () => (
             <img
               srcSet="/images/icons/icon_appstore_footer.png"
               alt="Google store"
+              src="data:,"
             />
           </a>
         </li>

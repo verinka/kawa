@@ -36,7 +36,7 @@ const FourthScreenTemplate = ({ header, subheader, text, list }) => (
                 srcSet="/images/4/phone-4.png 1x, images/4/phone-4@2x.png 2x, images/4/phone-4@3x.png 3x"
                 type="image/png"
               />
-              <img srcSet="/images/4/phone-4.png" alt="kawa phone faq" src="" />
+              <img srcSet="/images/4/phone-4.png" alt="kawa phone faq" src="data:," />
             </picture>
           </div>
         </div>

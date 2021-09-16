@@ -27,6 +27,7 @@ const FirstScreenTemplate = ({ header, subheader, text, hiddentext }) => (
                 srcSet="/images/1/phone-1.png"
                 alt="kawa phone main"
                 className="iphone"
+                src="data:,"
               />
             </picture>
           </div>
