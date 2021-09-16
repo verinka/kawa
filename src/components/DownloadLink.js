@@ -20,7 +20,7 @@ const DownloadLink = ({ className }) => (
     render={data => (
       <ul className={className}>
         <li className="mr-3">
-          <a href={data.markdownRemark.frontmatter.downloadlinks.playmarker}>
+          <a href={data.markdownRemark.frontmatter.downloadlinks.playmarker} target="_blank">
             <Picture
               sources={[
                 {
@@ -38,7 +38,7 @@ const DownloadLink = ({ className }) => (
           </a>
         </li>
         <li className="mr-3">
-          <a href={data.markdownRemark.frontmatter.downloadlinks.appstore}>
+          <a href={data.markdownRemark.frontmatter.downloadlinks.appstore} target="_blank">
             <Picture
               sources={[
                 {
@@ -57,7 +57,7 @@ const DownloadLink = ({ className }) => (
           </a>
         </li>
         {/* <li className="mr-3">
-          <a href={data.markdownRemark.frontmatter.downloadlinks.youtubevideo}>
+          <a href={data.markdownRemark.frontmatter.downloadlinks.youtubevideo} target="_blank">
             <Picture
               sources={[
                 {
