@@ -1201,7 +1201,7 @@ nav.right_menu_togle {
 }
 .full-screenbg .rs-video-content-wrap a.transparent-btn {
   display: inline-block;
-  background: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   border: 2px solid #ffffff;
   color: #ffffff;
 }
@@ -1292,7 +1292,7 @@ nav.right_menu_togle {
   transition: 0.4s;
   -webkit-transition: 0.4s;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  /*font-smoothing: antialiased;*/
 }
 .full-screenbg .arrow-btn i:hover {
   -webkit-animation: none;
