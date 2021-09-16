@@ -25,7 +25,8 @@ const DownloadLink = ({ className }) => (
               sources={[
                 {
                   srcSet: '/images/icons/icon_googleplay_footer.webp',
-                  type: 'image/webp'
+                  type: 'image/webp',
+                  src: '/images/icons/icon_googleplay_footer.png'
                 },
                 {
                   src: '/images/icons/icon_googleplay_footer.png',
@@ -33,7 +34,6 @@ const DownloadLink = ({ className }) => (
                   className: 'img-fluid'
                 }
               ]}
-              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII='
             />
           </a>
         </li>
@@ -43,7 +43,8 @@ const DownloadLink = ({ className }) => (
               sources={[
                 {
                   srcSet: '/images/icons/icon_appstore_footer.webp',
-                  type: 'image/webp'
+                  type: 'image/webp',
+                  src: '/images/icons/icon_appstore_footer.png'
                 },
                 {
                   src: '/images/icons/icon_appstore_footer.png',
@@ -51,7 +52,6 @@ const DownloadLink = ({ className }) => (
                   className: 'img-fluid'
                 }
               ]}
-              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII='
             />
           </a>
         </li>
