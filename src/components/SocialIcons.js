@@ -20,7 +20,7 @@ const SocialIcons = ({ slideText }) => (
     render={data => (
       <ul>
         <li>
-          <a href={data.markdownRemark.frontmatter.sociallinks.facebook}>
+          <a target="_blank" href={data.markdownRemark.frontmatter.sociallinks.facebook}>
             <i className="icon2-fb" />
             {slideText ? (
               <span className="animated slideInRight">кawa.app</span>
@@ -30,7 +30,7 @@ const SocialIcons = ({ slideText }) => (
           </a>
         </li>
         {/* <li>
-          <a href={data.markdownRemark.frontmatter.sociallinks.twitter}>
+          <a target="_blank" href={data.markdownRemark.frontmatter.sociallinks.twitter}>
             <i className="icon2-tw" />
             {slideText ? (
               <span className="animated slideInRight">кawa.app</span>
@@ -40,7 +40,7 @@ const SocialIcons = ({ slideText }) => (
           </a>
         </li> */}
         <li>
-          <a href={data.markdownRemark.frontmatter.sociallinks.youtube}>
+          <a target="_blank" href={data.markdownRemark.frontmatter.sociallinks.youtube}>
             <i className="icon2-yt" />
             {slideText ? (
               <span className="animated slideInRight">кawa.app</span>
@@ -50,7 +50,7 @@ const SocialIcons = ({ slideText }) => (
           </a>
         </li>
         <li>
-          <a href={data.markdownRemark.frontmatter.sociallinks.instagram}>
+          <a target="_blank" href={data.markdownRemark.frontmatter.sociallinks.instagram}>
             <i className="icon2-insta" />
             {slideText ? (
               <span className="animated slideInRight">кawa.app</span>
