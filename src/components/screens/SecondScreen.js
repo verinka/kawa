@@ -26,7 +26,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/cart.png"
                 alt="kawa cart"
                 className="img-fluid"
-                src=""
+                src="data:,"
               />
             </div>
 
@@ -45,7 +45,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/barcode.png"
                 alt="kawa barcode scanner"
                 className="img-fluid"
-                src=""
+                src="data:,"
               />
             </div>
             <div className="features-content">
@@ -63,7 +63,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/coffee-beans.png"
                 alt="kawa coffee card"
                 className="img-fluid"
-                src=""
+                src="data:,"
               />
             </div>
             <div className="features-content">
@@ -83,7 +83,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
               srcSet="/images/2/catalog.png"
               alt="kawa catalog"
               id="featureImage"
-              src=""
+              src="data:,"
             />
           </picture>
         </div>
@@ -98,7 +98,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/menu.png"
                 alt="kawa menu"
                 className="img-fluid"
-                src=""
+                src="data:,"
               />
             </div>
             <div className="features-content">
@@ -116,7 +116,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/search.png"
                 alt="kawa search"
                 className="img-fluid"
-                src=""
+                src="data:,"
               />
             </div>
             <div className="features-content">
@@ -134,7 +134,7 @@ const SecondScreenTemplate = ({ header, subheader, cards }) => (
                 srcSet="/images/icons/cup.png"
                 alt="kawa divination"
                 className="img-fluid"
-                src=""
+                src="data:,"
               />
             </div>
             <div className="features-content">
