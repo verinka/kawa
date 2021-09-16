@@ -21,7 +21,8 @@ const Header = ({ linksTitle }) => (
                 sources={[
                   {
                     srcSet: '/images/logo/kawa.webp',
-                    type: 'image/webp'
+                    type: 'image/webp',
+                    src: 'data:,'
                   },
                   {
                     src: '/images/logo/kawa.svg'

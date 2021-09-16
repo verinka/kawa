@@ -25,7 +25,8 @@ const DownloadLink = ({ className }) => (
               sources={[
                 {
                   srcSet: '/images/icons/icon_googleplay_footer.webp',
-                  type: 'image/webp'
+                  type: 'image/webp',
+                  src: 'data:,'
                 },
                 {
                   src: '/images/icons/icon_googleplay_footer.png',
@@ -42,7 +43,8 @@ const DownloadLink = ({ className }) => (
               sources={[
                 {
                   srcSet: '/images/icons/icon_appstore_footer.webp',
-                  type: 'image/webp'
+                  type: 'image/webp',
+                  src: 'data:,'
                 },
                 {
                   src: '/images/icons/icon_appstore_footer.png',
@@ -59,7 +61,8 @@ const DownloadLink = ({ className }) => (
               sources={[
                 {
                   srcSet: '/images/icons/youtube.webp',
-                  type: 'image/webp'
+                  type: 'image/webp',
+                  src: 'data:,'
                 },
                 {
                   src: '/images/icons/youtube.png',
