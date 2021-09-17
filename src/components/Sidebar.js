@@ -17,9 +17,9 @@ const Sidebar = ({ linksTitle }) => (
       </li>
       <li className="sidebar__item">
         <Link to="/ru" className="sidebar__link-lang--ru" />
-        <Link to="/blog" className="sidebar__link">
+        {/* <Link to="/blog" className="sidebar__link">
           {linksTitle.blog}
-        </Link>
+        </Link> */}
       </li>
       <li className="sidebar__item">
         <Link to="/en" className="sidebar__link-lang--en" />

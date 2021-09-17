@@ -2,11 +2,11 @@
 templateKey: config-page
 sociallinks:
   facebook: https://www.facebook.com/KawaMobileApp/
-  instagram: https://instagram.com/
+  instagram: https://www.instagram.com/kawa_vdoma/?utm_medium=copy_link
   twitter: https://twitter.com/
   youtube: https://www.youtube.com
 downloadlinks:
-  appstore: https://www.apple.com/ru/app-store/
+  appstore: https://apps.apple.com/us/app/%D0%BAawa/id1469094683
   playmarker: https://play.google.com/store/apps/details?id=com.wrevery.kawa&hl=ru&ah=5-f06qrzrs1XrS9DvOC88W6RxxU
   youtubevideo: https://www.youtube.com/watch?v=NjP4i2cKDRE
 supportlinks:
