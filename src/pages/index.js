@@ -27,7 +27,7 @@ export default class IndexPage extends React.Component {
     await loadScript("//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js");
     await loadScript("//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js");
     await loadScript("//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js");
-    await loadScript("//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js");
+    // await loadScript("//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js");
     await loadScript("//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js");
     await loadScript("//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js");
     await loadScript("/js/language.js");

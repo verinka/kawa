@@ -1,36 +1,32 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
+import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Accordion } from 'react-bootstrap';
 
-const Accordion = ({ accordion }) => (
-  <div className="accordion" id="accordion">
+const Accordions = ({ accordion }) => (
+  <>
+  <Accordion className="accordion" id="accordion" defaultActiveKey="u0">
     {accordion.map((item, i) => (
-      <div key={i} className="card">
-        <div className="card-header" id={'heading' + i}>
-          <button
-            className={i > 0 ? 'btn btn-link collapsed' : 'btn btn-link'}
-            type="button"
-            data-toggle="collapse"
-            data-target={'#collapse' + i}
-            aria-expanded="false"
-            aria-controls={'collapse' + i}
-          >
+      <Card key={i}>
+        <Accordion.Toggle as={Card.Header} eventKey={'u' + i} id={'heading' + i}>
+        <button
+              className='btn btn-link'
+              type="button"
+            >
             {item.title}
-          </button>
-        </div>
-        <div
-          id={'collapse' + i}
-          className={i === 0 ? 'collapse show' : 'collapse'}
-          aria-labelledby={'collapse' + i}
-          data-parent="#accordion"
-        >
-          <div className="card-body">{item.text}</div>
-        </div>
-      </div>
+            </button>
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey={'u' + i}>
+              <Card.Body>{item.text}</Card.Body>
+        </Accordion.Collapse>
+      </Card>
     ))}
-  </div>
+  </Accordion>
+  </>
 )
 
-Accordion.propTypes = {
+Accordions.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
@@ -39,4 +35,4 @@ Accordion.propTypes = {
   )
 }
 
-export default Accordion
+export default Accordions
