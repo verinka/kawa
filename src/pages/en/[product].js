@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Axios from 'axios';
-import Icon from '../components/product/Icon';
-import Market from '../components/product/Market';
-import Star from '../components/product/Star';
+import Icon from '/components/product/Icon';
+import Market from '/components/product/Market';
+import Star from '/components/product/Star';
 import webp from 'check-for-webp';
 
 import * as loadScript from "simple-load-script";
