@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import iconSet from '../../img/selection.json'
+import iconSet from '../img/selection.json'
 
 function Icon(props) {
   const [size, setSize] = useState(props.size || '20');
