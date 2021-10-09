@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import Icon from "../components/product/Icon";
+import Market from "../components/product/Market";
+import Star from "../components/product/Star";
 
 import * as loadScript from "simple-load-script";
 import "babel-polyfill";
