@@ -8,7 +8,9 @@ import "../../static/css/main.min.css";
 const TemplateWrapper = ({ children }) => (
   <React.Fragment>
     <div className="overlay-mobile" />
+    <div className="shelter-skelter">
     {children}
+    </div>
     <ScrollUp />
   </React.Fragment>
 );

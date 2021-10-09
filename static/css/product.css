@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&subset=cyrillic');
 body,
 html {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background-color: rgba(#000000, 0.5);
-
+  background-color: rgba(0,0,0, 0.5);
+  color: #212529;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   position: relative;
 }
 
@@ -14,19 +18,16 @@ html {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
-
-  @include media-breakpoint-up(md) {
-    background-attachment: initial;
-  }
 }
 h1 {
   font-weight: normal;
   font-size: 1.25rem;
   margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .wrapper {
-  background-color: rgba(#f8f8f8, 0.7);
+  background-color: rgba(248,248,248, 0.7);
   border-radius: 5px;
   padding: 10px;
   margin-top: 7px;
@@ -47,28 +48,24 @@ h1 {
 .price {
   margin-top: -25px;
   display: flex;
-
-  span {
-    border-bottom: solid 1px #89a6aa;
-    margin-bottom: 5.5px;
-    margin-right: 7px;
-    flex: 1;
-  }
-
   color: #010101;
   font-size: 1.5rem;
+}
+.price span {
+  border-bottom: solid 1px #89a6aa;
+  margin-bottom: 5.5px;
+  margin-right: 7px;
+  flex: 1;
 }
 
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
-
-  > .col,
-  > [class*='col-'] {
+}
+.no-gutters> .col,.no-gutters> [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
   }
-}
 
 .kawa-icon {
   line-height: 48px;
@@ -96,12 +93,13 @@ h1 {
   margin-bottom: 7px;
   padding-left: 5px;
   padding-right: 5px;
-  svg {
-    align-self: center;
-  }
-  &.open {
+  
+}
+.accordion-header.open {
     border-bottom: none;
   }
+.accordion-header  svg {
+  align-self: center;
 }
 
 .caption {
@@ -113,22 +111,23 @@ h1 {
 .support {
   display: flex;
   flex-direction: column;
-  &-btn {
-    background-color: #89a6aa;
-    align-self: center;
-    justify-content: center;
-    padding: 7px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #f8f8f8;
-    border-radius: 3px;
-    display: flex;
-    flex-grow: 1;
-    svg {
-      margin-right: 5px;
-    }
-  }
 }
+.support-btn {
+  background-color: #89a6aa;
+  align-self: center;
+  justify-content: center;
+  padding: 7px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #f8f8f8;
+  border-radius: 3px;
+  display: flex;
+  flex-grow: 1;
+}
+.support-btn svg {
+  margin-right: 5px;
+}
+
 
 .share-icon {
   position: absolute;
@@ -142,50 +141,55 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(#000000, 0.7);
+  background-color: rgba(0,0,0, 0.7);
   display: flex;
   padding-top: 30vh;
   flex-direction: column;
   align-items: center;
-
-  h3 {
-    font-size: 22px;
-    line-height: 22px;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    position: relative;
-    color: white;
-    font-weight: 300;
-    &::before {
-      position: absolute;
-      width: 150px;
-      content: '';
-      bottom: 0;
-      height: 3px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #ffffff;
-    }
-  }
-  a {
-    margin-bottom: 30px;
-  }
+}
+.market h3 {
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  color: white;
+  font-weight: 300;
+  
+}
+.market h3::before {
+  position: absolute;
+  width: 150px;
+  content: '';
+  bottom: 0;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+}
+.market a {
+  margin-bottom: 30px;
 }
 
 .dots {
   display: flex;
   align-items: center;
   justify-content: center;
-  .dot {
+  margin-bottom: 10px;
+}
+.dots .dot {
     height: 8px;
     width: 8px;
     border-radius: 50%;
     background-color: #89a6aa;
     margin-right: 10px;
-    &:not(:first-child) {
-      background-color: grey;
-    }
-  }
+}
+.dots .dot:not(:first-child) {
+  background-color: grey;
+}
 
-  margin-bottom: 10px;
+@media (min-width: 768px) {
+  .bg {
+      background-attachment: scroll;
+  }
 }
