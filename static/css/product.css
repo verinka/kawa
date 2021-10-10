@@ -193,3 +193,77 @@ h1 {
       background-attachment: scroll;
   }
 }
+
+
+
+@import '../images/iconfont/iconfont.css';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.star-main {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+}
+.char {
+  color: var(--inactive-color);
+  font-size: var(--font-size);
+  transition: all 0.3s ease-in-out;
+}
+.star-disable {
+  .star-full {
+    cursor: not-allowed;
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}
+.star-disable-default {
+  .star-full {
+    cursor: default;
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}
+.star-full {
+  position: relative;
+  display: inline-block;
+  transition: all 0.2s ease;
+  margin-right: 3px;
+  cursor: pointer;
+  line-height: 22px;
+}
+.star-able {
+  .star-full {
+    &:hover {
+      transform: scale(1.1);
+      .icon-full,
+      .icon-half {
+        color: var(--hover-color);
+      }
+    }
+  }
+}
+.star-half {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.icon-rate-2 {
+  color: transparent;
+}
+.icon-full,
+.icon-half {
+  color: var(--active-color);
+}
+.star-char {
+  padding: 5px;
+}

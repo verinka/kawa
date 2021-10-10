@@ -18,7 +18,7 @@ function Product(props) {
   const id = props.params.product;
   const [fruit, setFruit] = useState(JSON.stringify({foo: "bar", test: {example: "demo"}}));
   const [code, setCode] = useState("loading...");
-  const [item, setItem] = useState({});
+  const [item, setItem] = useState({file: [""]});
   const [categories, setCategories] = useState([]);
   const [backImage, setBackImage] = useState('');
   const [modal, setModal] = useState(false);
@@ -73,41 +73,33 @@ function Product(props) {
             <p>Вага: {item.weight} р.</p>
             {
               item.pid === '3' || item.pid === '4'
-                ? '<p>Количество: {item.quantity} шт.</p>'
+                ? (function () {return (<p>Количество: {item.quantity} шт.</p>)}())
                 : ''
             }
             <p>Упаковка: {item.package_human}.</p>
             <p>Країна виробник: {item.country_human}</p>
             {
               item.energy_value
-                ? '<p>Энергетическая ценность: ' +
-                  item.energy_value +
-                  ' ккал.</p>'
+                ? (function () {return (<p>Энергетическая ценность: {item.energy_value} ккал.</p>)}())
                 : ''
             }
             {
               item.proteins && item.fats && item.carbohydrates
-                ? '<p>Питательная ценность:<br>&emsp;белки — {item.proteins} г.<br>&emsp;жиры — {item.fats} г.<br>&emsp;углеводы — {item.carbohydrates} г.</p>'
+                ? (function () {return (<p>Питательная ценность:<br/>&emsp;белки — {item.proteins} г.<br/>&emsp;жиры — {item.fats} г.<br/>&emsp;углеводы — {item.carbohydrates} г.</p>)}())
                 : ''
             }
             {
               item.shelf_life
-                ? '<p>Термін придатності: ' + item.shelf_life + ' міс.</p>'
+                ? (function () {return (<p>Срок годности: {item.shelf_life} мес.</p>)}())
                 : ''
             }
-            {(() => {
-              if(item.shelf_life) {<hr/>} else {<hr/>}
-            })()}
             {
               item.storage_conditions
-                ? '<p>Условия хранения: ' +
-                  item.storage_conditions +
-                  '.</p>'
+                ? (function () {return (<p>Условия хранения {item.storage_conditions} .</p>)}())
                 : ''
             }
             </>);
     }
-
   return (
     <>
       <div onClick={showModal} className="container">
@@ -117,11 +109,20 @@ function Product(props) {
               <div className="share-icon" onClick={() => setFruit({foo: "foobar6"})}>
                 <Icon color="#302c23" size="25" icon="share" />
               </div>
-              <img src={item.file} alt={item.name} className="img-fluid mx-auto image-product"
+              <img src={item.file[0]} alt={item.name} className="img-fluid mx-auto image-product"
               />
-              <div v-if="countImg > 1" className="dots">
-                <div v-for="dot in countImg" key="dot" className="dot"></div>
-              </div>
+              
+              {
+                item.file && item.file.length > 1
+                ? (function () {
+                    return(<>
+                      <div className="dots">
+                          {item.file.map((value,index)=><div key={index} className="dot"></div>)}
+                      </div>
+                    </>)
+                  }())
+                : ""
+              }
               <h1>{item.name}</h1>
               <div className="desctiption">
                 
@@ -145,14 +146,14 @@ function Product(props) {
               </div>
               <div className="row no-gutters">
                 <div className="col-5">
-                  <client-only placeholder="Loading...">
+                  <div placeholder="Loading...">
                     <Star
                       star-half="true"
                       value="item.avg_rating"
                       disabled="true"
                       type="star"
                     />
-                  </client-only>
+                  </div>
                   <br />
                   Відгуків: {item.comments}
                 </div>
