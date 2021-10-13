@@ -97,32 +97,32 @@ function Product(props) {
   function caption() {
       return (<>
         <span dangerouslySetInnerHTML={{__html: item.text}}></span><br/>
-            <p>Weight: {item.weight} р.</p>
+            <p>Вага: {item.weight} р.</p>
             {
               item.pid === '3' || item.pid === '4'
-                ? (function () {return (<p>Quantity: {item.quantity} шт.</p>)}())
+                ? (function () {return (<p>Количество: {item.quantity} шт.</p>)}())
                 : ''
             }
-            <p>Package: {item.package_human}.</p>
-            <p>Manufacturer country: {item.country_human}</p>
+            <p>Упаковка: {item.package_human}.</p>
+            <p>Країна виробник: {item.country_human}</p>
             {
               item.energy_value
-                ? (function () {return (<p>Energy value: {item.energy_value} kcal.</p>)}())
+                ? (function () {return (<p>Энергетическая ценность: {item.energy_value} ккал.</p>)}())
                 : ''
             }
             {
               item.proteins && item.fats && item.carbohydrates
-                ? (function () {return (<p>Nutritional value:<br/>&emsp;proteins — {item.proteins} г.<br/>&emsp;fats — {item.fats} г.<br/>&emsp;carbohydrates — {item.carbohydrates} g.</p>)}())
+                ? (function () {return (<p>Питательная ценность:<br/>&emsp;белки — {item.proteins} г.<br/>&emsp;жиры — {item.fats} г.<br/>&emsp;углеводы — {item.carbohydrates} г.</p>)}())
                 : ''
             }
             {
               item.shelf_life
-                ? (function () {return (<p>Shelf life: {item.shelf_life} mon.</p>)}())
+                ? (function () {return (<p>Срок годности: {item.shelf_life} мес.</p>)}())
                 : ''
             }
             {
               item.storage_conditions
-                ? (function () {return (<p>Storage conditions {item.storage_conditions} .</p>)}())
+                ? (function () {return (<p>Условия хранения {item.storage_conditions} .</p>)}())
                 : ''
             }
             </>);
@@ -164,12 +164,12 @@ function Product(props) {
                 {item.arabic_percent ? item.arabic_percent + '%' : ''}
               </div>
               <div className="roast">
-              { item.pid > 7 ? '' : `Roast: ${item.roast_human}` }
+              { item.pid > 7 ? '' : `Обжарка ${item.roast_human}` }
               </div>
-              <div className="code">SCU: {item.code}</div>
+              <div className="code">Код товара: {item.code}</div>
               <div className="price">
                 <span />
-                {Math.floor( item.price )} UAH
+                {Math.floor( item.price )} грн
               </div>
               <div className="row no-gutters">
                 <div className="col-5">
@@ -182,28 +182,28 @@ function Product(props) {
                     />
                   </client-only>
                   <br />
-                  Reviews: {item.comments}
+                  Отзывов {item.comments}
                 </div>
                 <div className="col-2 kawa-icon">
                   <Icon color="#48433b" icon="small-cart-in-catalog" size="30" />
                 </div>
                 <div className="col-5">
-                  <div className="btnText">Buy now</div>
+                  <div className="btnText">Купить сейчас</div>
                 </div>
               </div>
             </div>
 
             <div class="wrapper">
               <div class="accordion-header">
-                Delivery and payments
+                Доставка и оплата
                 <Icon color="#302c23" icon="arrow-next" size="14" />
               </div>
               <div class="accordion-header">
-                Other products
+                Другие товары
                 <Icon color="#302c23" icon="arrow-next" size="14" />
               </div>
               <div class="accordion-header open">
-                Description
+                Описание
                 <Icon color="#302c23" icon="arrow-down" size="14" />
               </div>
               <div class="caption">
@@ -212,7 +212,8 @@ function Product(props) {
             </div>
             <div className="support">
               <div className="support-btn">
-                <Icon icon="telephone" size="20px" color="#f8f8f8" />Have any questions?
+                <Icon icon="telephone" size="20px" color="#f8f8f8" />Возникли
+                вопросы?
               </div>
             </div>
             {modal == true ? (<Market/>) : ('')}

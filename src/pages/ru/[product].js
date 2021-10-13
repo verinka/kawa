@@ -17,8 +17,28 @@ function Product(props) {
   const id = props.params.product;
   const [fruit, setFruit] = useState(JSON.stringify({foo: "bar", test: {example: "demo"}}));
   const [code, setCode] = useState("loading...");
-  const [item, setItem] = useState({});
-  const [categories, setCategories] = useState([]);
+  const [item, setItem] = useState({
+    file: [""], 
+    id: "123", 
+    pid: "5", 
+    quantity: "12", 
+    package_human: "герметичный пакет", 
+    country_human: "Австрия", 
+    energy_value: "", 
+    proteins: "", fats: "", carbohydrates: "", 
+    shelf_life: "24", 
+    storage_conditions: "", 
+    sort_human: "Арабика", 
+    arabic_percent: "100", 
+    roast_human: "Средне-тёмная", 
+    code: "9000400120446", 
+    name: "Julius Meinl Espresso Gold Cafe Expert, 1000 г", 
+    price: "930.00", 
+    comments: "0",
+    weight: "1000",
+    text: "<p>арабика 100%</p><p>интенсивный аромат с нотками пряных фруктов и орехов;</p><p>насыщенный сладковатый вкус с ностками ореха и кураги и идеально сбалансированная пикантная горчинка с кислинкой;</p><p>незабываемое послевкучие с привкусом горького шоколада.</p>"
+  });
+  const [categories, setCategories] = useState([{id:"5",name:"Кофе в зернах"},{id:"6",name:"lorem ipsum"}]);
   const [backImage, setBackImage] = useState('');
   const [modal, setModal] = useState(false);
   
@@ -27,7 +47,11 @@ function Product(props) {
   useEffect(() => {
     
     async function getToken() {
-      const itemData = await Axios.get("https://api.kawa.app/api/catalog/item/"+id)
+      const itemData = await Axios.get("https://api.kawa.app/api/catalog/item/"+id, {
+        headers: {
+          'Accept-Language': 'uk'
+        }
+      })
         .then((result) => {
           setItem(result.data.item)
         },(error) => {
@@ -36,7 +60,11 @@ function Product(props) {
         .catch(err => {
           // 
         })
-        const categoriesData = await Axios.get("https://api.kawa.app/api/catalog/categories")
+        const categoriesData = await Axios.get("https://api.kawa.app/api/catalog/categories", {
+          headers: {
+          ' Accept-Language': 'uk'
+          }
+        })
         .then((result) => {
           setCategories(result.data.categories)
         },(error) => {
@@ -59,7 +87,7 @@ function Product(props) {
       setBackImage ('/images/product_bg.png');
     }
     backgroundUrl();
-    getToken();
+    // getToken();
   }, []);
 
   function showModal() {
@@ -69,39 +97,32 @@ function Product(props) {
   function caption() {
       return (<>
         <span dangerouslySetInnerHTML={{__html: item.text}}></span><br/>
-            <p>Вес: {item.weight} г.</p>
+            <p>Вес: {item.weight} р.</p>
             {
               item.pid === '3' || item.pid === '4'
-                ? '<p>Количество: {item.quantity} шт.</p>'
+                ? (function () {return (<p>Количество: {item.quantity} шт.</p>)}())
                 : ''
             }
             <p>Упаковка: {item.package_human}.</p>
             <p>Страна производитель: {item.country_human}</p>
             {
               item.energy_value
-                ? '<p>Энергетическая ценность: ' +
-                  item.energy_value +
-                  ' ккал.</p>'
+                ? (function () {return (<p>Энергетическая ценность: {item.energy_value} ккал.</p>)}())
                 : ''
             }
             {
               item.proteins && item.fats && item.carbohydrates
-                ? '<p>Питательная ценность:<br>&emsp;белки — {item.proteins} г.<br>&emsp;жиры — {item.fats} г.<br>&emsp;углеводы — {item.carbohydrates} г.</p>'
+                ? (function () {return (<p>Питательная ценность:<br/>&emsp;белки — {item.proteins} г.<br/>&emsp;жиры — {item.fats} г.<br/>&emsp;углеводы — {item.carbohydrates} г.</p>)}())
                 : ''
             }
             {
               item.shelf_life
-                ? '<p>Срок годности: ' + item.shelf_life + ' мес.</p>'
+                ? (function () {return (<p>Срок годности: {item.shelf_life} мес.</p>)}())
                 : ''
             }
-            {(() => {
-              if(item.shelf_life) {<hr/>} else {<hr/>}
-            })()}
             {
               item.storage_conditions
-                ? '<p>Условия хранения: ' +
-                  item.storage_conditions +
-                  '.</p>'
+                ? (function () {return (<p>Условия хранения {item.storage_conditions} .</p>)}())
                 : ''
             }
             </>);
@@ -116,11 +137,19 @@ function Product(props) {
               <div className="share-icon" onClick={() => setFruit({foo: "foobar6"})}>
                 <Icon color="#302c23" size="25" icon="share" />
               </div>
-              <img src={item.file} alt={item.name} className="img-fluid mx-auto image-product"
+              <img src={item.file[0]} alt={item.name} className="img-fluid mx-auto image-product"
               />
-              <div v-if="countImg > 1" className="dots">
-                <div v-for="dot in countImg" key="dot" className="dot"></div>
-              </div>
+              {
+                item.file && item.file.length > 1
+                ? (function () {
+                    return(<>
+                      <div className="dots">
+                          {item.file.map((value,index)=><div key={index} className="dot"></div>)}
+                      </div>
+                    </>)
+                  }())
+                : ""
+              }
               <h1>{item.name}</h1>
               <div className="desctiption">
                 

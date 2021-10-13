@@ -5,7 +5,6 @@ import Axios from 'axios';
 import Icon from "../components/Icon";
 import Market from "../components/Market";
 import Star from "../components/Star";
-import Sidebar from "../components/Sidebar";
 import webp from 'check-for-webp';
 
 import * as loadScript from "simple-load-script";
@@ -18,8 +17,28 @@ function Product(props) {
   const id = props.params.product;
   const [fruit, setFruit] = useState(JSON.stringify({foo: "bar", test: {example: "demo"}}));
   const [code, setCode] = useState("loading...");
-  const [item, setItem] = useState({file: [""]});
-  const [categories, setCategories] = useState([]);
+  const [item, setItem] = useState({
+    file: [""], 
+    id: "123", 
+    pid: "5", 
+    quantity: "12", 
+    package_human: "герметичный пакет", 
+    country_human: "Австрия", 
+    energy_value: "", 
+    proteins: "", fats: "", carbohydrates: "", 
+    shelf_life: "24", 
+    storage_conditions: "", 
+    sort_human: "Арабика", 
+    arabic_percent: "100", 
+    roast_human: "Средне-тёмная", 
+    code: "9000400120446", 
+    name: "Julius Meinl Espresso Gold Cafe Expert, 1000 г", 
+    price: "930.00", 
+    comments: "0",
+    weight: "1000",
+    text: "<p>арабика 100%</p><p>интенсивный аромат с нотками пряных фруктов и орехов;</p><p>насыщенный сладковатый вкус с ностками ореха и кураги и идеально сбалансированная пикантная горчинка с кислинкой;</p><p>незабываемое послевкучие с привкусом горького шоколада.</p>"
+  });
+  const [categories, setCategories] = useState([{id:"5",name:"Кофе в зернах"},{id:"6",name:"lorem ipsum"}]);
   const [backImage, setBackImage] = useState('');
   const [modal, setModal] = useState(false);
   
@@ -28,7 +47,11 @@ function Product(props) {
   useEffect(() => {
     
     async function getToken() {
-      const itemData = await Axios.get("https://api.kawa.app/api/catalog/item/"+id)
+      const itemData = await Axios.get("https://api.kawa.app/api/catalog/item/"+id, {
+        headers: {
+          'Accept-Language': 'uk'
+        }
+      })
         .then((result) => {
           setItem(result.data.item)
         },(error) => {
@@ -37,7 +60,11 @@ function Product(props) {
         .catch(err => {
           // 
         })
-        const categoriesData = await Axios.get("https://api.kawa.app/api/catalog/categories")
+        const categoriesData = await Axios.get("https://api.kawa.app/api/catalog/categories", {
+          headers: {
+            'Accept-Language': 'uk'
+          }
+        })
         .then((result) => {
           setCategories(result.data.categories)
         },(error) => {
@@ -60,7 +87,7 @@ function Product(props) {
       setBackImage ('/images/product_bg.png');
     }
     backgroundUrl();
-    getToken();
+    // getToken();
   }, []);
 
   function showModal() {
