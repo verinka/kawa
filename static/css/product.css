@@ -1,15 +1,4 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  background-color: rgba(0,0,0, 0.5);
-  color: #212529;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  position: relative;
-}
+
 
 .bg {
   background-repeat: no-repeat;
@@ -212,21 +201,19 @@ h1 {
   font-size: var(--font-size);
   transition: all 0.3s ease-in-out;
 }
-.star-disable {
-  .star-full {
+
+.star-disable .star-full {
     cursor: not-allowed;
-    &:hover {
-      transform: scale(1);
-    }
   }
+.star-disable .star-full:hover {
+  transform: scale(1);
 }
-.star-disable-default {
-  .star-full {
-    cursor: default;
-    &:hover {
-      transform: scale(1);
-    }
-  }
+
+.star-disable-default .star-full {
+  cursor: default;
+}
+.star-disable-default .star-full:hover {
+  transform: scale(1);
 }
 .star-full {
   position: relative;
@@ -236,16 +223,12 @@ h1 {
   cursor: pointer;
   line-height: 22px;
 }
-.star-able {
-  .star-full {
-    &:hover {
-      transform: scale(1.1);
-      .icon-full,
-      .icon-half {
-        color: var(--hover-color);
-      }
-    }
-  }
+.star-able .star-full:hover {
+  transform: scale(1.1);
+}
+.star-able .star-full:hover .icon-full,
+.icon-half {
+  color: var(--hover-color);
 }
 .star-half {
   position: absolute;

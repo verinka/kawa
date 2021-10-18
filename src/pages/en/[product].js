@@ -36,7 +36,7 @@ function Product(props) {
     price: "930.00", 
     comments: "0",
     weight: "1000",
-    text: "<p>арабика 100%</p><p>интенсивный аромат с нотками пряных фруктов и орехов;</p><p>насыщенный сладковатый вкус с ностками ореха и кураги и идеально сбалансированная пикантная горчинка с кислинкой;</p><p>незабываемое послевкучие с привкусом горького шоколада.</p>"
+    text: "<p>Default description</p>"
   });
   const [categories, setCategories] = useState([{id:"5",name:"Кофе в зернах"},{id:"6",name:"lorem ipsum"}]);
   const [backImage, setBackImage] = useState('');
@@ -49,7 +49,7 @@ function Product(props) {
     async function getToken() {
       const itemData = await Axios.get("https://api.kawa.app/api/catalog/item/"+id, {
         headers: {
-          'Accept-Language': 'uk'
+          'Accept-Language': 'en'
         }
       })
         .then((result) => {
@@ -62,7 +62,7 @@ function Product(props) {
         })
         const categoriesData = await Axios.get("https://api.kawa.app/api/catalog/categories", {
           headers: {
-            'Accept-Language': 'uk'
+            'Accept-Language': 'en'
           }
         })
         .then((result) => {
@@ -87,7 +87,7 @@ function Product(props) {
       setBackImage ('/images/product_bg.png');
     }
     backgroundUrl();
-    // getToken();
+    getToken();
   }, []);
 
   function showModal() {
