@@ -6,6 +6,7 @@ import Icon from '../../components/Icon';
 import Market from '../../components/Market';
 import Star from '../../components/Star';
 import webp from 'check-for-webp';
+import { createGlobalStyle } from 'styled-components'
 
 import * as loadScript from "simple-load-script";
 import "babel-polyfill";
@@ -14,6 +15,19 @@ import "../../../static/css/product.css";
 
 
 function Product(props) {
+  const GlobalStyle = createGlobalStyle`
+    html,body {
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: 100% !important;
+      background-color: rgba(0,0,0, 0.5) !important;
+      color: #212529 !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      line-height: 1.5 !important;
+      position: relative !important;
+    }
+  `
   const id = props.params.product;
   const [fruit, setFruit] = useState(JSON.stringify({foo: "bar", test: {example: "demo"}}));
   const [code, setCode] = useState("loading...");
@@ -130,6 +144,7 @@ function Product(props) {
 
   return (
     <>
+      <GlobalStyle />
       <div onClick={showModal} className="container">
         <div className="row">
           <div style={{ backgroundImage: 'url('+backImage+')' }} className="col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-5 col-xl-4 bg">
